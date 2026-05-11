@@ -8,22 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  :root{
-    --cream:#F5EFE4;--beige:#EDE4D3;--tan:#C9A97A;--brown:#8B6340;--dark:#4A3520;
-    --green:#5C6B4A;--green-bg:#EAF0E4;--muted:#7A6050;--text:#3D2B1A;
-  }
+  :root{--cream:#F5EFE4;--beige:#EDE4D3;--tan:#C9A97A;--brown:#8B6340;--dark:#4A3520;--green:#5C6B4A;--green-bg:#EAF0E4;--muted:#7A6050;--text:#3D2B1A;}
   html,body{background:var(--cream);min-height:100vh;}
   body{font-family:'Noto Sans TC',sans-serif;color:var(--text);max-width:480px;margin:0 auto;padding-bottom:56px;}
 
-  /* HERO */
-  .hero{background:linear-gradient(155deg,#3D2B1A 0%,#6B4C32 100%);color:#F5EFE4;padding:52px 32px 52px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .hero{background:linear-gradient(155deg,#3D2B1A 0%,#6B4C32 100%);color:#F5EFE4;padding:52px 32px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;}
   .hero::before{content:'';position:absolute;top:-60px;right:-50px;width:240px;height:240px;border-radius:50%;background:rgba(201,169,122,0.10);}
   .hero::after{content:'';position:absolute;bottom:-70px;left:-30px;width:180px;height:180px;border-radius:50%;background:rgba(201,169,122,0.07);}
   .brand-name{font-size:20px;letter-spacing:5px;color:#C9A97A;font-weight:300;margin-bottom:20px;}
   .main-title{font-family:'Noto Serif TC',serif;font-size:30px;font-weight:400;line-height:1.65;letter-spacing:2px;margin-bottom:20px;}
-  .tagline{font-size:14px;color:rgba(245,239,228,0.6);line-height:2;font-weight:300;letter-spacing:0.5px;}
+  .tagline{font-size:14px;color:rgba(245,239,228,0.6);line-height:2;font-weight:300;}
 
-  /* PLANS */
   .plans{display:flex;flex-direction:column;gap:16px;padding:24px 16px 0;}
   .plan{background:#fff;border-radius:18px;overflow:hidden;}
   .plan.year-plan{border:2px solid #5C6B4A;}
@@ -32,7 +27,7 @@
   .plan-header{padding:22px 20px 16px;}
   .plan-top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
   .plan-name{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:400;color:#4A3520;}
-  .rec-pill{font-size:12px;background:#5C6B4A;color:#fff;padding:5px 14px;border-radius:20px;letter-spacing:0.5px;}
+  .rec-pill{font-size:12px;background:#5C6B4A;color:#fff;padding:5px 14px;border-radius:20px;}
 
   .price-row{display:flex;align-items:baseline;gap:4px;margin-bottom:8px;}
   .p-num{font-family:'Noto Serif TC',serif;font-size:46px;font-weight:300;color:#4A3520;line-height:1;}
@@ -41,10 +36,9 @@
   .save-green{color:#5C6B4A;background:#EAF0E4;}
   .save-tan{color:#8B6340;background:#FDF6EC;}
 
-  .perks{display:flex;flex-direction:column;gap:12px;padding:0 20px 18px;}
-  .perk{display:flex;align-items:flex-start;gap:12px;font-size:16px;line-height:1.65;color:#3D2B1A;}
-  .pk{width:24px;height:24px;border-radius:50%;background:#EDE4D3;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:#8B6340;margin-top:3px;}
-  .pk svg{width:14px;height:14px;stroke:#8B6340;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .perks{display:flex;flex-direction:column;gap:11px;padding:0 20px 18px;}
+  .perk{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.5;color:#3D2B1A;}
+  .pk{font-size:22px;flex-shrink:0;width:28px;text-align:center;}
 
   .model-section{padding:0 20px 22px;}
   .model-label{font-size:15px;color:#7A6050;margin-bottom:12px;font-weight:500;}
@@ -58,37 +52,43 @@
   .mb-arrow{font-size:24px;opacity:0.8;}
 
   .month-cta{padding:0 20px 22px;}
-  .month-btn{display:block;width:100%;padding:18px;border:none;border-radius:14px;background:#4A3520;color:#F5EFE4;font-family:'Noto Serif TC',serif;font-size:19px;letter-spacing:1px;cursor:pointer;text-align:center;text-decoration:none;}
+  .month-btn{display:block;width:100%;padding:18px;border:none;border-radius:14px;background:#4A3520;color:#F5EFE4;font-family:'Noto Serif TC',serif;font-size:19px;letter-spacing:1px;text-align:center;text-decoration:none;}
   .month-btn:active{opacity:0.85;}
 
   .deposit-block{margin:0 16px;background:#fff;border-radius:18px;border:2px solid #C9A97A;padding:22px 20px;}
   .deposit-title{font-size:19px;font-weight:500;color:#4A3520;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-  .deposit-title svg{width:22px;height:22px;stroke:#8B6340;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
   .dep-steps{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;}
   .dep-step{display:flex;align-items:flex-start;gap:14px;}
   .dep-num{width:30px;height:30px;border-radius:50%;background:#8B6340;color:#fff;font-size:15px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .dep-text{font-size:16px;color:#3D2B1A;line-height:1.65;padding-top:4px;}
   .dep-text strong{color:#8B6340;}
-  .dep-btn{display:block;width:100%;padding:16px;border:2px solid #8B6340;border-radius:14px;background:transparent;color:#8B6340;font-family:'Noto Serif TC',serif;font-size:17px;letter-spacing:0.5px;cursor:pointer;text-align:center;text-decoration:none;}
+  .dep-btn{display:block;width:100%;padding:16px;border:2px solid #8B6340;border-radius:14px;background:transparent;color:#8B6340;font-family:'Noto Serif TC',serif;font-size:17px;text-align:center;text-decoration:none;}
+
+  .compare-section{padding:16px 16px 0;}
+  .compare-img{width:100%;border-radius:14px;display:block;}
+
+  .line-block{margin:16px 16px 0;background:#fff;border-radius:18px;border:2px solid #06C755;padding:22px 20px;}
+  .line-top{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .line-icon{width:44px;height:44px;background:#06C755;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px;}
+  .line-heading{font-size:18px;font-weight:500;color:#3D2B1A;line-height:1.4;}
+  .line-heading span{font-size:13px;color:#7A6050;display:block;margin-top:2px;font-weight:400;}
+  .line-items{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+  .line-item{display:flex;align-items:center;gap:12px;font-size:16px;color:#3D2B1A;}
+  .li-icon{font-size:20px;width:26px;text-align:center;flex-shrink:0;}
+  .line-btn{display:block;width:100%;padding:16px;border:none;border-radius:14px;background:#06C755;color:#fff;font-family:'Noto Serif TC',serif;font-size:17px;text-align:center;text-decoration:none;}
+  .line-btn:active{opacity:0.85;}
 
   .gap{height:16px;}
-  .lock-note{text-align:center;font-size:14px;color:#7A6050;padding:22px 20px 0;line-height:2.1;}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="brand-name">煖 意</div>
-  <div class="main-title">
-    <br>精油訂閱制
-  </div>
-  <div class="tagline">
-    預訂每一日的暖意，讓生活在氣息中悄悄亮起希望。
-  </div>
+  <div class="main-title">精油訂閱制</div>
+  <div class="tagline">預訂每一日的暖意，讓生活在氣息中悄悄亮起希望。</div>
 </div>
 
-<!-- 方案 -->
 <div class="plans">
 
   <!-- 年訂閱 -->
@@ -105,18 +105,9 @@
       <div class="save-tag save-green">每月省 $700・年省 $11,680</div>
     </div>
     <div class="perks">
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span>
-        <span>擴香儀<strong>直接贈送</strong>，永久擁有，免押金</span>
-      </div>
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
-        <span>每月寄一瓶 10ml 精油（價值 $2,680），香氣自選</span>
-      </div>
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
-        <span>運費全由煖意負擔，年繳一次輕鬆無憂</span>
-      </div>
+      <div class="perk"><span class="pk">🎁</span><span>擴香儀直接贈送，永久擁有，免押金</span></div>
+      <div class="perk"><span class="pk">📦</span><span>每月 10ml 精油（價值 $2,680），香氣自選</span></div>
+      <div class="perk"><span class="pk">🚚</span><span>運費全免，年繳一次輕鬆無憂</span></div>
     </div>
     <div class="model-section">
       <div class="model-label">選擇擴香儀款式，點擊即可下單 👇</div>
@@ -124,14 +115,14 @@
         <a class="model-btn mb-classic" href="https://90a5d24hxz.cashier.ecpay.com.tw/product/000000000914689" target="_blank">
           <div>
             <div class="mb-name">經典款</div>
-            <div class="mb-sub">擴香儀市價 $3,280・直接贈與</div>
+            <div class="mb-sub">市價 $3,280・直接贈與</div>
           </div>
           <span class="mb-arrow">→</span>
         </a>
         <a class="model-btn mb-tulip" href="https://90a5d24hxz.cashier.ecpay.com.tw/product/000000000932838" target="_blank">
           <div>
             <div class="mb-name">鬱金香款</div>
-            <div class="mb-sub">擴香儀市價 $3,680・直接贈與</div>
+            <div class="mb-sub">市價 $3,680・直接贈與</div>
           </div>
           <span class="mb-arrow">→</span>
         </a>
@@ -153,22 +144,10 @@
       <div class="save-tag save-tan">每月省 $300・押金 $1,980 滿年全額退還</div>
     </div>
     <div class="perks">
-      <div class="perk">
-        <span class="pk" style="font-size:10px;font-weight:500;">0元</span>
-        <span>0 元先拿回家擴香儀（市價 $3,280），免費使用</span>
-      </div>
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
-        <span>每月寄一瓶 10ml 精油（價值 $2,680），香氣自選</span>
-      </div>
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-        <span>訂滿 12 個月，擴香儀送您，押金全額退回</span>
-      </div>
-      <div class="perk">
-        <span class="pk"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></span>
-        <span>隨時可以停止，只收整新費 $600，其餘退款</span>
-      </div>
+      <div class="perk"><span class="pk">🆓</span><span>0 元領擴香儀（市價 $3,280），免費使用</span></div>
+      <div class="perk"><span class="pk">📦</span><span>每月 10ml 精油（價值 $2,680），香氣自選</span></div>
+      <div class="perk"><span class="pk">🎁</span><span>訂滿 12 個月，擴香儀送您，押金全退</span></div>
+      <div class="perk"><span class="pk">⏸️</span><span>隨時可停，只收整新費 $600</span></div>
     </div>
     <div class="month-cta">
       <a class="month-btn" href="https://90a5d24hxz.cashier.ecpay.com.tw/product/000000000914687" target="_blank">
@@ -184,8 +163,7 @@
 <!-- 押金說明 -->
 <div class="deposit-block">
   <div class="deposit-title">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    月訂閱・下單流程說明
+    ℹ️ 月訂閱・下單流程
   </div>
   <div class="dep-steps">
     <div class="dep-step">
@@ -198,17 +176,41 @@
     </div>
     <div class="dep-step">
       <div class="dep-num">3</div>
-      <div class="dep-text">兩筆都完成後，計畫正式啟動，擴香儀 3–6 個工作天寄出</div>
+      <div class="dep-text">兩筆完成後計畫啟動，擴香儀 7 個工作天內寄出</div>
     </div>
   </div>
   <a class="dep-btn" href="https://90a5d24hxz.cashier.ecpay.com.tw/product/000000000914688" target="_blank">
-    押金 $1,980 付款連結 →
+    💳 押金 $1,980 付款連結 →
   </a>
 </div>
 
-<div class="lock-note">
-  🔒 訂閱後加入官方 Line<br>解鎖專屬隱藏福利
+<!-- 方案比較圖 -->
+<div class="compare-section">
+  <img class="compare-img" src="方案比較圖.png" alt="方案比較">
 </div>
+
+<div class="gap"></div>
+
+<!-- Line 區塊 -->
+<div class="line-block">
+  <div class="line-top">
+    <div class="line-icon">💬</div>
+    <div class="line-heading">
+      訂閱後加入官方 Line
+      <span>下單完成記得來這裡！</span>
+    </div>
+  </div>
+  <div class="line-items">
+    <div class="line-item"><span class="li-icon">🌸</span><span>每月在此選香</span></div>
+    <div class="line-item"><span class="li-icon">📖</span><span>擴香儀使用說明＆教學</span></div>
+    <div class="line-item"><span class="li-icon">👑</span><span>解鎖 VIP 隱藏官網</span></div>
+  </div>
+  <a class="line-btn" href="https://line.me/R/ti/p/@349nwwah" target="_blank">
+    加入官方 Line →
+  </a>
+</div>
+
+<div class="gap"></div>
 
 </body>
 </html>
